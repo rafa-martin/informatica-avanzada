@@ -6,6 +6,7 @@
 
 namespace IA_Clinic {
 
+// Clase creada por Rafa
 class Database
 {
     struct DataVectorBase_t {};
