@@ -17,12 +17,12 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 include_directories(includes)
 
 set(PROJECT_SOURCES
-        main.cpp
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
 
         includes/database/database.hpp
+        src/main.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
