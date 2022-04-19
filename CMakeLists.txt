@@ -17,9 +17,9 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 include_directories(includes)
 
 set(PROJECT_SOURCES
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        src/windows/mainwindow.cpp
+        includes/windows/mainwindow.h
+        src/windows/mainwindow.ui
 
         includes/database/database.hpp
         src/main.cpp
