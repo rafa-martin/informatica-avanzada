@@ -23,6 +23,8 @@ set(PROJECT_SOURCES
         mainwindow.ui
 
         includes/database/database.hpp
+        includes/vacuna.h
+        src/vacuna.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
