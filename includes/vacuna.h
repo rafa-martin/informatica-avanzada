@@ -47,6 +47,10 @@ public:
     }
 };
 
+monodosis::monodosis():vacuna(){}
+
+multidosis::multidosis():vacuna(){}
+
 void vacuna::set_tipo(int num){
     if (num==0){
         tipo="Johnson";
@@ -81,12 +85,12 @@ vacuna* new_vacuna(){
     srand(time(NULL));
     int num=0+rand()%3;
     if (num==0){
-        vacuna * vac=new monodosis();
+        vacuna * vac= new monodosis();
         vac->set_tipo(num);
         return vac;
     }
     else{
-        vacuna * vac=new multidosis();
+        vacuna * vac= new multidosis();
         vac->set_tipo(num);
         return vac;
     }
