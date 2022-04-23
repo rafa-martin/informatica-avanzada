@@ -17,18 +17,18 @@ protected:
     std::string tipo;
     QDate fecha_1puesta;
 public:
-    vacuna();
+    vacuna(int id);
     void set_1puesta(int d,int m, int y);
     void set_tipo(int num);
     void set_id(int id);
-    virtual std::vector<QDate> Get_fechas();
+    virtual std::vector<QDate> Get_fechas() =0;
     std::string Get_datos();
 };
 
 //Se crean vacunas que sean de una sola dosis o de dos
 class monodosis:public vacuna{
 public:
-    monodosis();
+    monodosis(int id);
     std::vector<QDate> Get_fechas(){
         std::vector<QDate> fecha;
         fecha.push_back(fecha_1puesta);
@@ -38,7 +38,7 @@ public:
 
 class multidosis:public vacuna{
 public:
-    multidosis();
+    multidosis(int id);
     std::vector<QDate> Get_fechas(){
         std::vector<QDate> fecha;
         fecha.push_back(fecha_1puesta);
@@ -47,52 +47,6 @@ public:
     }
 };
 
-monodosis::monodosis():vacuna(){}
+vacuna* new_vacuna(int id);
 
-multidosis::multidosis():vacuna(){}
-
-void vacuna::set_tipo(int num){
-    if (num==0){
-        tipo="Johnson";
-    }
-    else if(num==1){
-        tipo="Pfizer";
-    }
-    else{
-        tipo="Moderna";
-    }
-
-}
-
-void vacuna::set_1puesta(int d,int m, int y){
-    fecha_1puesta=QDate(y,m,d);
-}
-
-void vacuna::set_id(int id){
-    identificador=id;
-}
-
-std::string vacuna::Get_datos(){
-    string data= "Vacuna ";
-    data.append(to_string(identificador));
-    data.append(" de tipo");
-    data.append(tipo);
-    return data;
-}
-
-//La asignación de cada tipo de vacuna es aleatoria
-vacuna* new_vacuna(){
-    srand(time(NULL));
-    int num=0+rand()%3;
-    if (num==0){
-        vacuna * vac= new monodosis();
-        vac->set_tipo(num);
-        return vac;
-    }
-    else{
-        vacuna * vac= new multidosis();
-        vac->set_tipo(num);
-        return vac;
-    }
-}
 #endif // VACUNA_H
