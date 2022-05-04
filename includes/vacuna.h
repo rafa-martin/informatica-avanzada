@@ -25,6 +25,7 @@ public:
     void set_tipo(int num);
     void set_id(int id);
     void set_dni(string dni_per);
+    string Get_DNI();
     virtual std::vector<QDate> Get_fechas() =0;
     std::string Get_datos();
 };

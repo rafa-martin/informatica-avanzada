@@ -35,7 +35,7 @@ std::string vacuna::Get_datos(){
     data.append(to_string(identificador));
     data.append(" de tipo ");
     data.append(tipo);
-    data.append(" asignada al dni ");
+    data.append(" asignada al DNI ");
     data.append(dni_persona);
     return data;
 }
@@ -66,6 +66,9 @@ std::vector<QDate> monodosis::Get_fechas(){
     return fecha;
 }
 
+string vacuna::Get_DNI(){
+    return dni_persona;
+};
 std::vector<QDate> multidosis::Get_fechas(){
     std::vector<QDate> fecha;
     fecha.push_back(fecha_1puesta);
