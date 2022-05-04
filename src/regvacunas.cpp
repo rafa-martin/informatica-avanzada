@@ -12,3 +12,27 @@ RegVacunas::~RegVacunas()
 {
     delete ui;
 }
+
+void RegVacunas::on_pushButton_clicked()
+{
+
+}
+
+
+void RegVacunas::on_pushButton_2_clicked()
+{
+
+}
+
+
+void RegVacunas::on_pushButton_3_clicked()
+{
+
+}
+
+
+void RegVacunas::on_commandLinkButton_clicked()
+{
+    close();
+}
+

@@ -28,6 +28,12 @@ set(PROJECT_SOURCES
         src/regvacunas.cpp
         src/regvacunas.ui
         includes/regvacunas.h
+        src/addinfo.cpp
+        src/addinfo.ui
+        src/getinfo.ui
+        src/getinfo.cpp
+        includes/addinfo.h
+        includes/getinfo.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
