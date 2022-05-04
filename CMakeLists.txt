@@ -25,6 +25,9 @@ set(PROJECT_SOURCES
         includes/database/database.hpp
         includes/pruebadiagnostica.h
         src/pruebadiagnostica.cpp
+        includes/crearprueba.h
+        src/crearprueba.cpp
+        src/crearprueba.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
