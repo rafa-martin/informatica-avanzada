@@ -29,22 +29,13 @@ public:
 class monodosis:public vacuna{
 public:
     monodosis(int id);
-    std::vector<QDate> Get_fechas(){
-        std::vector<QDate> fecha;
-        fecha.push_back(fecha_1puesta);
-        return fecha;
-    }
+    std::vector<QDate> Get_fechas();
 };
 
 class multidosis:public vacuna{
 public:
     multidosis(int id);
-    std::vector<QDate> Get_fechas(){
-        std::vector<QDate> fecha;
-        fecha.push_back(fecha_1puesta);
-        fecha.push_back(fecha_1puesta.addDays(21));
-        return fecha;
-    }
+    std::vector<QDate> Get_fechas();
 };
 
 vacuna* new_vacuna(int id);

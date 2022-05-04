@@ -53,3 +53,16 @@ vacuna* new_vacuna(int id){
         return vac;
     }
 }
+
+std::vector<QDate> monodosis::Get_fechas(){
+    std::vector<QDate> fecha;
+    fecha.push_back(fecha_1puesta);
+    return fecha;
+}
+
+std::vector<QDate> multidosis::Get_fechas(){
+    std::vector<QDate> fecha;
+    fecha.push_back(fecha_1puesta);
+    fecha.push_back(fecha_1puesta.addDays(21));
+    return fecha;
+}
