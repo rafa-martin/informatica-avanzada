@@ -33,9 +33,15 @@ void vacuna::set_id(int id){
 std::string vacuna::Get_datos(){
     string data= "Vacuna ";
     data.append(to_string(identificador));
-    data.append(" de tipo");
+    data.append(" de tipo ");
     data.append(tipo);
+    data.append(" asignada al dni ");
+    data.append(dni_persona);
     return data;
+}
+
+void vacuna::set_dni(string dni_per){
+    dni_persona=dni_per;
 }
 
 //La asignación de cada tipo de vacuna es aleatoria
