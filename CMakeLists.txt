@@ -25,6 +25,9 @@ set(PROJECT_SOURCES
         includes/database/database.hpp
         includes/vacuna.h
         src/vacuna.cpp
+        src/regvacunas.cpp
+        src/regvacunas.ui
+        includes/regvacunas.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
