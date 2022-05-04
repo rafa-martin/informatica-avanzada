@@ -15,7 +15,16 @@ public:
     explicit CrearPrueba(QWidget *parent = nullptr);
     ~CrearPrueba();
 
+    bool getguardar();
+    void test();
+
+private slots:
+    void on_guardar_clicked();
+
+    void on_pushButton_clicked();
+
 private:
+    bool guardar=false;
     Ui::CrearPrueba *ui;
 };
 
