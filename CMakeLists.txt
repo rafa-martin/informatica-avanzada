@@ -23,6 +23,8 @@ set(PROJECT_SOURCES
         mainwindow.ui
 
         includes/database/database.hpp
+        src/usuarios.cpp
+        includes/usuarios.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
