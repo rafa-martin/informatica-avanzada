@@ -21,10 +21,14 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        dialog.h
+        dialog.ui
 
         includes/database/database.hpp
         src/usuarios.cpp
+        src/dialog.cpp
         includes/usuarios.h
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
