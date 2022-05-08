@@ -27,8 +27,11 @@ set(PROJECT_SOURCES
         src/usuarios/usuarios.cpp
         src/usuarios/ventanadatosusuario.cpp
         src/usuarios/ventanadatosusuario.ui
+        src/usuarios/buscarcrearusuario.cpp
+        src/usuarios/buscarcrearusuario.ui
         includes/usuarios/usuarios.h
         includes/usuarios/ventanadatosusuario.h
+        includes/usuarios/buscarcrearusuario.h
 
 
 )
