@@ -2,6 +2,7 @@
 #define CREARPRUEBA_H
 
 #include <QDialog>
+#include <pruebadiagnostica.h>
 
 namespace Ui {
 class CrearPrueba;
@@ -17,6 +18,8 @@ public:
 
     bool getguardar();
     void test();
+    PruebaDiagnostica* getprueba();
+
 
 private slots:
     void on_guardar_clicked();

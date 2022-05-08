@@ -27,6 +27,26 @@ void CrearPrueba::on_guardar_clicked()
     close();
 }
 
+PruebaDiagnostica* CrearPrueba::getprueba()
+{
+    QString prueba=ui->tipoprueba->currentText();
+    PruebaDiagnostica* P=nullptr;
+    if (prueba=="PCR")
+    {
+        P=new PCR();
+    }
+    else if (prueba=="Antigenos")
+    {
+        P=new Antigenos();
+    }
+    QString dni=ui->dni->text();
+    P->setdni(dni.toStdString());
+
+    QDate fecha=ui->dateEdit->date();
+    P->setFecha(fecha.day(),fecha.month(),fecha.year());
+
+    return P;
+}
 
 void CrearPrueba::on_pushButton_clicked()
 {
