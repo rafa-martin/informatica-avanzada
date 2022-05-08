@@ -21,13 +21,15 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
-        dialog.h
-        dialog.ui
+
 
         includes/database/database.hpp
-        src/usuarios.cpp
-        src/dialog.cpp
-        includes/usuarios.h
+        src/usuarios/usuarios.cpp
+        src/usuarios/ventanadatosusuario.cpp
+        src/usuarios/ventanadatosusuario.ui
+        includes/usuarios/usuarios.h
+        includes/usuarios/ventanadatosusuario.h
+
 
 )
 

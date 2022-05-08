@@ -12,6 +12,8 @@ public:
     QString Apellidos;
     QString DNI;
     double Edad;
+    void busqueda_usuario(QString dni_usuario);
+    void crear_usuario();
 };
 
 class administrador:usuarios
