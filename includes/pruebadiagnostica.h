@@ -16,6 +16,7 @@ public:
     void setdni(string);
     void setFecha(int dia,int mes, int anyo);
     virtual string getnombre()=0;
+    QDate getFecha();
 
 };
 

@@ -20,6 +20,11 @@ string PruebaDiagnostica::getdni()
     return dni;
 }
 
+QDate PruebaDiagnostica::getFecha()
+{
+    return fechaMuestra;
+}
+
 void PruebaDiagnostica::setdni(string dni_in)
 {
     dni=dni_in;
