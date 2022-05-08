@@ -12,11 +12,10 @@ public:
     QString Apellidos;
     QString DNI;
     double Edad;
-    void busqueda_usuario(QString dni_usuario);
-    void crear_usuario();
+
 };
 
-class administrador:usuarios
+class administrador:public usuarios
 {
 public:
     administrador();
@@ -25,14 +24,14 @@ public:
 
 };
 
-class enfermero:usuarios
+class enfermero:public usuarios
 {
 public:
     enfermero();
     double Sueldo;
 };
 
-class tecnico:usuarios
+class tecnico:public usuarios
 {
 public:
     tecnico();
@@ -40,7 +39,7 @@ public:
     double num_laboratorio;
 };
 
-class paciente:usuarios
+class paciente:public usuarios
 {
 public:
     paciente();

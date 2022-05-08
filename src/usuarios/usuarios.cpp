@@ -5,3 +5,23 @@ usuarios::usuarios()
 {
 
 }
+
+administrador::administrador()
+{
+
+}
+
+enfermero::enfermero()
+{
+
+}
+
+tecnico::tecnico()
+{
+
+}
+
+paciente::paciente()
+{
+
+}
