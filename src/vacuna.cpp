@@ -26,12 +26,16 @@ void vacuna::set_1puesta(int d,int m, int y){
     fecha_1puesta=QDate(y,m,d);
 }
 
+void vacuna::set_1puesta(QDate fecha){
+    fecha_1puesta=fecha;
+}
+
 void vacuna::set_id(int id){
     identificador=id;
 }
 
 std::string vacuna::Get_datos(){
-    string data= "Vacuna ";
+    string data= "Vacuna con identificador ";
     data.append(to_string(identificador));
     data.append(" de tipo ");
     data.append(tipo);
@@ -69,6 +73,11 @@ std::vector<QDate> monodosis::Get_fechas(){
 string vacuna::Get_DNI(){
     return dni_persona;
 };
+
+string vacuna::Get_tipo(){
+    return tipo;
+}
+
 std::vector<QDate> multidosis::Get_fechas(){
     std::vector<QDate> fecha;
     fecha.push_back(fecha_1puesta);
