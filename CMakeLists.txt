@@ -28,6 +28,9 @@ set(PROJECT_SOURCES
         includes/crearprueba.h
         src/crearprueba.cpp
         src/crearprueba.ui
+        includes/mostrarprueba.h
+        src/mostrarprueba.cpp
+        src/mostrarprueba.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
