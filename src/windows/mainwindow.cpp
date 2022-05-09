@@ -39,6 +39,8 @@ MainWindow::MainWindow(QWidget *parent)
     //
     QObject::connect(ui->actionEquipo_tecnico, &QAction::triggered,
                      this, &MainWindow::openEntryPointEquipoTecnico);
+    QObject::connect(ui->actionUCLM, &QAction::triggered,
+                     this, &MainWindow::openUCLM);
     QObject::connect(ui->actionETSII_CR, &QAction::triggered,
                      this, &MainWindow::openETSII);
 }
