@@ -14,6 +14,11 @@ class BuscarCrearUsuario : public QDialog
     Q_OBJECT
 
 public:
+    /**
+     * @brief Constructor de la clase
+     * @param db:base de datos donde estan almacenados los usuarios y el resto de sus datos
+     * @param parent: puntero de la ventana que abre la nueva ventana.
+     */
     explicit BuscarCrearUsuario(IA_Clinic::Database &db,QWidget *parent = nullptr);
     ~BuscarCrearUsuario();
     usuarios* buscar_usuario(QString DNI);
