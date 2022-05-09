@@ -103,6 +103,12 @@ void VentanaDatosUsuario::set_usuario(usuarios* usuario)
     }
 }
 
+void VentanaDatosUsuario::set_dni(QString DNI)
+{
+    ui->DNI->setText(DNI);
+    ui->DNI->setEnabled(false);
+}
+
 bool VentanaDatosUsuario::guardar()
 {
     return guardado;
