@@ -39,6 +39,17 @@ set(PROJECT_SOURCES
         includes/usuarios/buscarcrearusuario.h
         src/usuarios/buscarcrearusuario.cpp
         src/usuarios/buscarcrearusuario.ui
+        
+        includes/pruebas/pruebadiagnostica.h
+        src/pruebas/pruebadiagnostica.cpp
+        
+        includes/pruebas/crearprueba.h
+        src/pruebas/crearprueba.cpp
+        src/pruebas/crearprueba.ui
+        
+        includes/pruebas/mostrarprueba.h
+        src/pruebas/mostrarprueba.cpp
+        src/pruebas/mostrarprueba.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
