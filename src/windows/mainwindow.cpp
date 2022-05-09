@@ -7,6 +7,7 @@
 #include <windows/equipotecnicowindow.h>
 #include <usuarios/buscarcrearusuario.h>
 #include <pruebas/mostrarprueba.h>
+#include <vacunas/regvacunas.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -70,6 +71,8 @@ void MainWindow::openEntryPointPruebas()
 void MainWindow::openEntryPointVacunas()
 {
     qDebug() << "Abriendo ventana de vacunas";
+    RegVacunas w(db, this);
+    w.exec();
 }
 
 void MainWindow::openEntryPointEquipoTecnico()
