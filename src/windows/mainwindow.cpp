@@ -6,6 +6,7 @@
 
 #include <windows/equipotecnicowindow.h>
 #include <usuarios/buscarcrearusuario.h>
+#include <pruebas/mostrarprueba.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -62,6 +63,8 @@ void MainWindow::openEntryPointUsuarios()
 void MainWindow::openEntryPointPruebas()
 {
     qDebug() << "Abriendo ventana de pruebas";
+    MostrarPrueba w(db, this);
+    w.exec();
 }
 
 void MainWindow::openEntryPointVacunas()
