@@ -62,6 +62,11 @@ set_target_properties(informatica_avanzada PROPERTIES
     WIN32_EXECUTABLE TRUE
 )
 
+qt_add_resources(informatica_avanzada "app_images"
+    PREFIX "/"
+    FILES images/uclm-logo.png
+)
+
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(informatica_avanzada)
 endif()

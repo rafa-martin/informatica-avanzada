@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setWindowTitle("Clinica COVID-19");
+    setWindowIcon(QIcon(":/images/uclm-logo.png"));
 
     // CONNECT USER WINDOW
     //
