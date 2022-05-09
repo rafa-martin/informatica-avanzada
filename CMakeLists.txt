@@ -23,17 +23,17 @@ set(PROJECT_SOURCES
         mainwindow.ui
 
         includes/database/database.hpp
-        includes/vacuna.h
-        src/vacuna.cpp
-        src/regvacunas.cpp
-        src/regvacunas.ui
-        includes/regvacunas.h
-        src/addinfo.cpp
-        src/addinfo.ui
-        src/getinfo.ui
-        src/getinfo.cpp
-        includes/addinfo.h
-        includes/getinfo.h
+        includes/vacunas/vacuna.h
+        src/vacunas/vacuna.cpp
+        src/vacunas/regvacunas.cpp
+        src/vacunas/regvacunas.ui
+        includes/vacunas/regvacunas.h
+        src/vacunas/addinfo.cpp
+        src/vacunas/addinfo.ui
+        src/vacunas/getinfo.ui
+        src/vacunas/getinfo.cpp
+        includes/vacunas/addinfo.h
+        includes/vacunas/getinfo.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

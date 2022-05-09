@@ -1,4 +1,4 @@
-#include "vacuna.h"
+#include "vacunas/vacuna.h"
 
 vacuna::vacuna(int id)
 {
@@ -35,8 +35,8 @@ void vacuna::set_id(int id){
 }
 
 std::string vacuna::Get_datos(){
-    string data= "Vacuna con identificador ";
-    data.append(to_string(identificador));
+    std::string data= "Vacuna con identificador ";
+    data.append(std::to_string(identificador));
     data.append(" de tipo ");
     data.append(tipo);
     data.append(" asignada al DNI ");
@@ -44,7 +44,7 @@ std::string vacuna::Get_datos(){
     return data;
 }
 
-void vacuna::set_dni(string dni_per){
+void vacuna::set_dni(std::string dni_per){
     dni_persona=dni_per;
 }
 
@@ -70,11 +70,11 @@ std::vector<QDate> monodosis::Get_fechas(){
     return fecha;
 }
 
-string vacuna::Get_DNI(){
+std::string vacuna::Get_DNI(){
     return dni_persona;
 };
 
-string vacuna::Get_tipo(){
+std::string vacuna::Get_tipo(){
     return tipo;
 }
 

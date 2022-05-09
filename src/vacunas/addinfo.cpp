@@ -1,7 +1,7 @@
-#include "addinfo.h"
+#include "vacunas/addinfo.h"
 #include "ui_addinfo.h"
 #include <QMessageBox>
-#include <regvacunas.h>
+#include <vacunas/regvacunas.h>
 
 addinfo::addinfo(vacuna& v,QWidget *parent) :
     QDialog(parent),

@@ -1,14 +1,13 @@
-#include "regvacunas.h"
+#include "vacunas/regvacunas.h"
 #include "ui_regvacunas.h"
-#include "vacuna.h"
-#include <getinfo.h>
-#include <addinfo.h>
+#include "vacunas/vacuna.h"
+#include <vacunas/getinfo.h>
+#include <vacunas/addinfo.h>
 #include <vector>
 #include <string>
 #include <QMessageBox>
 #include <QLineEdit>
 #include <QString>
-using namespace std;
 
 RegVacunas::RegVacunas(IA_Clinic::Database &db,QWidget *parent) :
     QDialog(parent),
@@ -21,11 +20,6 @@ RegVacunas::RegVacunas(IA_Clinic::Database &db,QWidget *parent) :
 RegVacunas::~RegVacunas()
 {
     delete ui;
-}
-
-
-void RegVacunas::set_data(string i){
-
 }
 
 vacuna* RegVacunas::get_vacuna(int id){
@@ -43,7 +37,6 @@ void RegVacunas::on_commandLinkButton_clicked()
     close();
 }
 
-
 void RegVacunas::on_obtener_clicked()
 {
     int id= ui->lineEdit->text().toInt();
@@ -54,11 +47,9 @@ void RegVacunas::on_obtener_clicked()
         box.exec();
         return;
     }
-
     getinfo c(*v1);
     c.exec();
 }
-
 
 void RegVacunas::on_insertar_clicked()
 {
@@ -76,7 +67,6 @@ void RegVacunas::on_insertar_clicked()
             box.exec();
             return;
         }else{
-
             std::vector<vacuna*>& vacunas = db.getDataVector<vacuna*>();
             vacuna* v2=new_vacuna(id);
             vacunas.push_back(v2);
@@ -86,7 +76,6 @@ void RegVacunas::on_insertar_clicked()
     }
 
 }
-
 
 void RegVacunas::on_registro_clicked()
 {

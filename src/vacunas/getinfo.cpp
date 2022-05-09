@@ -1,6 +1,6 @@
-#include "getinfo.h"
+#include "vacunas/getinfo.h"
 #include "ui_getinfo.h"
-#include <regvacunas.h>
+#include <vacunas/regvacunas.h>
 #include <QString>
 
 getinfo::getinfo(vacuna& v,QWidget *parent) :
@@ -12,8 +12,7 @@ getinfo::getinfo(vacuna& v,QWidget *parent) :
     ui->dni->setText(QString::fromStdString(v.Get_DNI()));
     ui->tipo->setText(QString::fromStdString(v.Get_tipo()));
     ui->tipo->setEnabled(false);
-    string Tipo=v.Get_tipo();
-    //Si es de una sola puesta no aparece la opcion de la segunda
+    std::string Tipo=v.Get_tipo();
     if (Tipo=="Johnson"){
         ui->dateEdit_2->setVisible(false);
         ui->label_3->setVisible(false);

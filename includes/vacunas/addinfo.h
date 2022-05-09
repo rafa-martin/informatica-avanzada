@@ -1,9 +1,7 @@
-#ifndef ADDINFO_H
-#define ADDINFO_H
+#pragma once
 
 #include <QDialog>
-#include <vacuna.h>
-
+#include <vacunas/vacuna.h>
 
 namespace Ui {
 class addinfo;
@@ -18,11 +16,12 @@ public:
     ~addinfo();
 
 private slots:
+    /**
+     * @brief Botón que cierra la ventana y guarda los cambios realizados
+     */
     void on_commandLinkButton_clicked();
 
 private:
     Ui::addinfo *ui;
     vacuna& v;
 };
-
-#endif // ADDINFO_H
