@@ -17,17 +17,36 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 include_directories(includes)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        src/main.cpp
 
         includes/database/database.hpp
+
+        includes/windows/mainwindow.h
+        src/windows/mainwindow.cpp
+        src/windows/mainwindow.ui
+
+        includes/windows/equipotecnicowindow.h
+        src/windows/equipotecnicowindow.cpp
+        src/windows/equipotecnicowindow.ui
+        
+        includes/usuarios/usuarios.h
+        src/usuarios/usuarios.cpp
+
+        includes/usuarios/ventanadatosusuario.h
+        src/usuarios/ventanadatosusuario.cpp
+        src/usuarios/ventanadatosusuario.ui
+
+        includes/usuarios/buscarcrearusuario.h
+        src/usuarios/buscarcrearusuario.cpp
+        src/usuarios/buscarcrearusuario.ui
+        
         includes/pruebas/pruebadiagnostica.h
         src/pruebas/pruebadiagnostica.cpp
+        
         includes/pruebas/crearprueba.h
         src/pruebas/crearprueba.cpp
         src/pruebas/crearprueba.ui
+        
         includes/pruebas/mostrarprueba.h
         src/pruebas/mostrarprueba.cpp
         src/pruebas/mostrarprueba.ui
@@ -64,6 +83,11 @@ set_target_properties(informatica_avanzada PROPERTIES
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
+)
+
+qt_add_resources(informatica_avanzada "app_images"
+    PREFIX "/"
+    FILES images/uclm-logo.png
 )
 
 if(QT_VERSION_MAJOR EQUAL 6)
