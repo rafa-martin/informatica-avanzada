@@ -17,16 +17,28 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 include_directories(includes)
 
 set(PROJECT_SOURCES
-        src/windows/mainwindow.cpp
+        src/main.cpp
+
+        includes/database/database.hpp
+
         includes/windows/mainwindow.h
+        src/windows/mainwindow.cpp
         src/windows/mainwindow.ui
 
         includes/windows/equipotecnicowindow.h
         src/windows/equipotecnicowindow.cpp
         src/windows/equipotecnicowindow.ui
+        
+        includes/usuarios/usuarios.h
+        src/usuarios/usuarios.cpp
 
-        includes/database/database.hpp
-        src/main.cpp
+        includes/usuarios/ventanadatosusuario.h
+        src/usuarios/ventanadatosusuario.cpp
+        src/usuarios/ventanadatosusuario.ui
+
+        includes/usuarios/buscarcrearusuario.h
+        src/usuarios/buscarcrearusuario.cpp
+        src/usuarios/buscarcrearusuario.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

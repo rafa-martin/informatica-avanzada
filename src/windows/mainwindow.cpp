@@ -5,6 +5,7 @@
 #include <QUrl>
 
 #include <windows/equipotecnicowindow.h>
+#include <usuarios/buscarcrearusuario.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -54,6 +55,8 @@ MainWindow::~MainWindow()
 void MainWindow::openEntryPointUsuarios()
 {
     qDebug() << "Abriendo ventana de usuarios";
+    BuscarCrearUsuario w(db);
+    w.exec();
 }
 
 void MainWindow::openEntryPointPruebas()
