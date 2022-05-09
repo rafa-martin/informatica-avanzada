@@ -55,7 +55,7 @@ MainWindow::~MainWindow()
 void MainWindow::openEntryPointUsuarios()
 {
     qDebug() << "Abriendo ventana de usuarios";
-    BuscarCrearUsuario w(db);
+    BuscarCrearUsuario w(db, this);
     w.exec();
 }
 
