@@ -17,12 +17,16 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 include_directories(includes)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        src/windows/mainwindow.cpp
+        includes/windows/mainwindow.h
+        src/windows/mainwindow.ui
+
+        includes/windows/equipotecnicowindow.h
+        src/windows/equipotecnicowindow.cpp
+        src/windows/equipotecnicowindow.ui
 
         includes/database/database.hpp
+        src/main.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -56,6 +60,11 @@ set_target_properties(informatica_avanzada PROPERTIES
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
+)
+
+qt_add_resources(informatica_avanzada "app_images"
+    PREFIX "/"
+    FILES images/uclm-logo.png
 )
 
 if(QT_VERSION_MAJOR EQUAL 6)
