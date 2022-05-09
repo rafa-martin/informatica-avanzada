@@ -1,7 +1,7 @@
-#include "mostrarprueba.h"
+#include <pruebas/mostrarprueba.h>
 #include "ui_mostrarprueba.h"
-#include "crearprueba.h"
-#include <iostream>
+#include <pruebas/crearprueba.h>
+
 MostrarPrueba::MostrarPrueba(IA_Clinic::Database &db,QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MostrarPrueba),
@@ -19,7 +19,7 @@ MostrarPrueba::~MostrarPrueba()
 void MostrarPrueba::actualizar()
 {
 
-    vector<PruebaDiagnostica*>& db_pruebas = db.getDataVector<PruebaDiagnostica*>();
+    std::vector<PruebaDiagnostica*>& db_pruebas = db.getDataVector<PruebaDiagnostica*>();
     int cont=0;
     ui->tableWidget->setRowCount(db_pruebas.size());
     for (auto prueba:db_pruebas)
@@ -47,7 +47,7 @@ void MostrarPrueba::on_pushButton_clicked()
     CrearPrueba temp;
     temp.exec();
     temp.getguardar();
-    vector<PruebaDiagnostica*>& db_pruebas = db.getDataVector<PruebaDiagnostica*>();
+    std::vector<PruebaDiagnostica*>& db_pruebas = db.getDataVector<PruebaDiagnostica*>();
 
     if (temp.getguardar()==true)
     {
@@ -57,4 +57,3 @@ void MostrarPrueba::on_pushButton_clicked()
     }
 
 }
-

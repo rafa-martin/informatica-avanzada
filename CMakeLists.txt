@@ -23,14 +23,14 @@ set(PROJECT_SOURCES
         mainwindow.ui
 
         includes/database/database.hpp
-        includes/pruebadiagnostica.h
-        src/pruebadiagnostica.cpp
-        includes/crearprueba.h
-        src/crearprueba.cpp
-        src/crearprueba.ui
-        includes/mostrarprueba.h
-        src/mostrarprueba.cpp
-        src/mostrarprueba.ui
+        includes/pruebas/pruebadiagnostica.h
+        src/pruebas/pruebadiagnostica.cpp
+        includes/pruebas/crearprueba.h
+        src/pruebas/crearprueba.cpp
+        src/pruebas/crearprueba.ui
+        includes/pruebas/mostrarprueba.h
+        src/pruebas/mostrarprueba.cpp
+        src/pruebas/mostrarprueba.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

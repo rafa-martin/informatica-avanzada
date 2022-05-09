@@ -1,4 +1,4 @@
-#include "crearprueba.h"
+#include <pruebas/crearprueba.h>
 #include "ui_crearprueba.h"
 
 CrearPrueba::CrearPrueba(QWidget *parent) :
@@ -11,14 +11,6 @@ CrearPrueba::CrearPrueba(QWidget *parent) :
 CrearPrueba::~CrearPrueba()
 {
     delete ui;
-}
-
-void CrearPrueba::test()
-{
-    QString dni=ui->dni->text();
-    QDate fecha=ui->dateEdit->date();
-    QString prueba=ui->tipoprueba->currentText();
-
 }
 
 void CrearPrueba::on_guardar_clicked()
