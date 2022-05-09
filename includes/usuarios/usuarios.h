@@ -13,6 +13,10 @@ public:
     QString DNI;
     double Edad=0;
     /*Al poner igual a 0, obligamos a las funciones hijo a que se implemente esta función*/
+    /**
+     * @brief obtener_tipo: funcion que devuelve un string dependiendo del tipo de usuario que reciba la función (empleo de polimorfismo)
+     * @return
+     */
     virtual QString obtener_tipo()=0;
 
 };
