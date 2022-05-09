@@ -21,6 +21,10 @@ set(PROJECT_SOURCES
         includes/windows/mainwindow.h
         src/windows/mainwindow.ui
 
+        includes/windows/equipotecnicowindow.h
+        src/windows/equipotecnicowindow.cpp
+        src/windows/equipotecnicowindow.ui
+
         includes/database/database.hpp
         src/main.cpp
 )
