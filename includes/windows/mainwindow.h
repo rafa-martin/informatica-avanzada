@@ -15,6 +15,13 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void openEntryPointUsuarios();
+    void openEntryPointPruebas();
+    void openEntryPointVacunas();
+
+    void openEntryPointEquipoTecnico();
+
 private:
     Ui::MainWindow *ui;
     IA_Clinic::Database db;

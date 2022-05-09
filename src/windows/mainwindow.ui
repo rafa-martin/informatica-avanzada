@@ -6,16 +6,138 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>493</width>
+    <height>373</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushUsuarios">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>140</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gestión de Usuarios</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>40</y>
+      <width>331</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>27</pointsize>
+      <bold>true</bold>
+      <strikeout>false</strikeout>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>Clinica COVID</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushPruebas">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>190</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gestión de Pruebas Diagnósticas</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushVacunas">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>240</y>
+      <width>291</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gestión de Vacunación</string>
+    </property>
+   </widget>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>493</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSobre_Nosotros">
+    <property name="title">
+     <string>Sobre Nosotros</string>
+    </property>
+    <addaction name="actionUCLM"/>
+    <addaction name="actionInformatica_Avanzada"/>
+    <addaction name="separator"/>
+    <addaction name="actionEquipo_tecnico"/>
+   </widget>
+   <widget class="QMenu" name="menuGestion">
+    <property name="title">
+     <string>Gestión de estradas</string>
+    </property>
+    <addaction name="actionUsuarios"/>
+    <addaction name="actionPruebas_Diagnosticas"/>
+    <addaction name="actionVacunacion"/>
+   </widget>
+   <addaction name="menuGestion"/>
+   <addaction name="menuSobre_Nosotros"/>
+  </widget>
+  <action name="actionUsuarios">
+   <property name="text">
+    <string>Usuarios</string>
+   </property>
+  </action>
+  <action name="actionPruebas_Diagnosticas">
+   <property name="text">
+    <string>Pruebas Diagnósticas</string>
+   </property>
+  </action>
+  <action name="actionVacunacion">
+   <property name="text">
+    <string>Vacunación</string>
+   </property>
+  </action>
+  <action name="actionUCLM">
+   <property name="text">
+    <string>UCLM</string>
+   </property>
+  </action>
+  <action name="actionInformatica_Avanzada">
+   <property name="text">
+    <string>Informática Avanzada</string>
+   </property>
+  </action>
+  <action name="actionEquipo_tecnico">
+   <property name="text">
+    <string>Equipo técnico</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
