@@ -1,6 +1,9 @@
 #include <windows/mainwindow.h>
 #include "ui_mainwindow.h"
 
+#include <QDesktopServices>
+#include <QUrl>
+
 #include <windows/equipotecnicowindow.h>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -34,6 +37,8 @@ MainWindow::MainWindow(QWidget *parent)
     //
     QObject::connect(ui->actionEquipo_tecnico, &QAction::triggered,
                      this, &MainWindow::openEntryPointEquipoTecnico);
+    QObject::connect(ui->actionETSII_CR, &QAction::triggered,
+                     this, &MainWindow::openETSII);
 }
 
 MainWindow::~MainWindow()
@@ -62,4 +67,16 @@ void MainWindow::openEntryPointEquipoTecnico()
     qDebug() << "Abriendo ventana de equipo tecnico";
     EquipoTecnicoWindow equipo_tecnico(this);
     equipo_tecnico.exec();
+}
+
+void MainWindow::openUCLM()
+{
+    qDebug() << "Abriendo web UCLM";
+    QDesktopServices::openUrl(QUrl("https://www.uclm.es/"));
+}
+
+void MainWindow::openETSII()
+{
+    qDebug() << "Abriendo web ETSII-CR";
+    QDesktopServices::openUrl(QUrl("https://www.uclm.es/ciudad-real/etsii"));
 }

@@ -93,7 +93,7 @@
      <string>Sobre Nosotros</string>
     </property>
     <addaction name="actionUCLM"/>
-    <addaction name="actionInformatica_Avanzada"/>
+    <addaction name="actionETSII_CR"/>
     <addaction name="separator"/>
     <addaction name="actionEquipo_tecnico"/>
    </widget>
@@ -128,9 +128,9 @@
     <string>UCLM</string>
    </property>
   </action>
-  <action name="actionInformatica_Avanzada">
+  <action name="actionETSII_CR">
    <property name="text">
-    <string>Informática Avanzada</string>
+    <string>ETSII-CR</string>
    </property>
   </action>
   <action name="actionEquipo_tecnico">

@@ -21,6 +21,8 @@ private slots:
     void openEntryPointVacunas();
 
     void openEntryPointEquipoTecnico();
+    void openUCLM();
+    void openETSII();
 
 private:
     Ui::MainWindow *ui;
