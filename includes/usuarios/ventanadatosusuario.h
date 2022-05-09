@@ -20,6 +20,7 @@ public:
     /*Esta función devuelve un puntero de usuario*/
     usuarios* get_usuario();
     bool guardar();
+    void set_dni(QString DNI);
 private slots:
     void on_Guardar_bton_clicked();
 
