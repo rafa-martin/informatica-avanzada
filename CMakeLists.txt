@@ -50,6 +50,21 @@ set(PROJECT_SOURCES
         includes/pruebas/mostrarprueba.h
         src/pruebas/mostrarprueba.cpp
         src/pruebas/mostrarprueba.ui
+
+        includes/vacunas/vacuna.h
+        src/vacunas/vacuna.cpp
+
+        includes/vacunas/regvacunas.h
+        src/vacunas/regvacunas.cpp
+        src/vacunas/regvacunas.ui
+
+        includes/vacunas/getinfo.h
+        src/vacunas/addinfo.cpp
+        src/vacunas/addinfo.ui
+
+        includes/vacunas/addinfo.h
+        src/vacunas/getinfo.cpp
+        src/vacunas/getinfo.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
