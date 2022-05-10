@@ -19,10 +19,8 @@ class Database
             static std::size_t type{nextTypeID++};
             return type;
         }
-
-    private:
-        inline static std::size_t nextTypeID {0};
     };
+    inline static std::size_t nextTypeID {0};
 
     std::unordered_map<std::size_t, std::unique_ptr<DataVectorBase_t>> all_data_;
 
