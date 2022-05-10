@@ -30,6 +30,7 @@ void BuscarCrearUsuario::on_pushButton_clicked()
         std::vector<usuarios*> &db_usuarios=db.getDataVector<usuarios*>();
         db_usuarios.push_back(n_usuario);
     }
+    on_lineEdit_textEdited(ui->lineEdit->text());
 }
 usuarios* BuscarCrearUsuario::buscar_usuario(QString DNI)
 {
