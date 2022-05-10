@@ -25,7 +25,7 @@ void BuscarCrearUsuario::on_pushButton_clicked()
         mi_ventana.set_usuario(us_dni);
     }
     mi_ventana.exec();
-    if(mi_ventana.guardar()&&us_dni==nullptr){
+    if(mi_ventana.guardar()){
         usuarios* n_usuario=mi_ventana.get_usuario();
         std::vector<usuarios*> &db_usuarios=db.getDataVector<usuarios*>();
         db_usuarios.push_back(n_usuario);
